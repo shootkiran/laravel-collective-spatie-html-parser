@@ -21,10 +21,13 @@ class FormAdapter
         $route = array_key_exists('route', $options) ? $options['route'] : '';
         $files = array_key_exists('files', $options) ? $options['files'] : false;
 
+        echo '<pre>', var_dump($options), '</pre>';
+
         var_dump($options);
         var_dump($method);
         var_dump($route);
         var_dump($files);
+        exit;
 
         unset($options['method'], $options['route'], $options['files']);
 
