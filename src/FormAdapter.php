@@ -30,12 +30,17 @@ class FormAdapter
         $form = html();
 
         if (is_array($route)) {
-            $action = array_shift($route);
-            $form = $form->form($method, route($action, $route));
+            if(count($route)==2){
+                $action = array_shift($route);
+                $route = array_shift($route);
+                $form = $form->form($method, route($action, $route));
+            }else{
+                $action = array_shift($route);
+                $form = $form->form($method, route($action, $route));
+            }
+          
         } else {
-            // dd($route);
             if ($route == "") {
-                //without any route
                 $form = $form->form($method);
             } else {
                 $form = $form->form($method, route($route));
