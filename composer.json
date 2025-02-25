@@ -1,5 +1,5 @@
 {
-    "name": "alban/laravel-collective-spatie-html-parser",
+    "name": "shootkiran/laravel-collective-spatie-html-parser",
     "description": "Adapter class that allows use spatie/laravel-html for old projects that were using the abanondated laravelcollective/html package, and allow to update to new versions of laravel",
     "type": "library",
     "require": {
