@@ -25,14 +25,6 @@ class FormAdapter
                 : '');
         $files = array_key_exists('files', $options) ? $options['files'] : false;
 
-        echo '<pre>', var_dump($options), '</pre>';
-
-        var_dump($options);
-        var_dump($method); // POST
-        var_dump($route); // ROUTELESS
-        var_dump($files); // FILELESS
-        exit;
-
         unset($options['method'], $options['route'], $options['files']);
 
         $form = html();
