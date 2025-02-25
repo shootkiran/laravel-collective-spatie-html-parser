@@ -33,7 +33,13 @@ class FormAdapter
             $action = array_shift($route);
             $form = $form->form($method, route($action, $route));
         } else {
-            $form = $form->form($method, route($route));
+            if($route==[]){
+                //without any route
+                $form = $form->form($method);
+            }else{
+                 $form = $form->form($method, route($route));
+            }
+           
         }
 
         if ($files) {
